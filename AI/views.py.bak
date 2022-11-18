@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 import os
 import openai
-from apis import API_KEYS
+from . import API_KEYS
 openai.organization = "org-JbEOZF4t1NSzHcOAUVQswEaG"
 openai.api_key = API_KEYS
 respons = openai.Completion.create(
