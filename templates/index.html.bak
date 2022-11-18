@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<title>Den Home Page</title>
+		{% load static %}
+		<style>
+			a{
+			text-decoration: none;
+			}
+			h1{
+			text-align:center;
+			}
+			p{
+			text-align:center;
+			font-size:35px;
+			}
+			* {
+				box-sizing:border-box;
+				}
+			body {
+				margin:20px;
+				background-color: #fafafa;
+				font-family:Calibri;
+				}
+			textarea {
+				width:90%;
+				resize: vertical;
+				padding:15px;
+				border-radius:15px;
+				border:0;
+				box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+				height:130px;
+				}
+			input[type=button],
+			input[type=submit] {
+				background-color: #62529c;
+				border: none;
+				color: #fff;
+				padding: 15px 30px;
+				text-decoration: none;
+				margin: 4px 2px;
+				cursor: pointer;
+			}
+			.button-32 {
+  background-color: #fff000;
+  border-radius: 12px;
+  color: #000;
+  margin: 4px 2px;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  width: 15%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-32:not(:disabled):hover,
+.button-32:not(:disabled):focus {
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.button-32:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
+		</style>
+	</head>
+	<body>
+		<h1>Welome Back 😇 </h1>
+		<br>
+		<h2>{{quto}}</h2>
+		<br>
+		<h3>The Below is your Den 😁<h3>
+		<form action='' method='POST'>
+		{%csrf_token%}
+			<textarea placeholder="Topic " name='topic'></textarea>
+			<br> <br>
+			<textarea placeholder="Questions" name='ans'></textarea>
+			<br> <br>
+		<input type='submit'></input>
+		</form>
+		<p>{{fir}}<p>
+		<br>
+	<a class="button-32" role="button" href = 'GC'>Grammer Check</a>
+	<a class="button-32" role="button" href = 'emoji'>Emoji Generator</a>
+	<a class="button-32" role="button" href = 'quest'>Questions</a>
+	<a class="button-32" role="button" href = 'quote'>Qutoe</a>
+	</body>
+</html>
