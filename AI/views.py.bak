@@ -3,7 +3,7 @@ from django.shortcuts import render
 import os
 import openai
 openai.organization = "org-JbEOZF4t1NSzHcOAUVQswEaG"
-openai.api_key ="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"
+openai.api_key ="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"
 respons = openai.Completion.create(
   engine="text-davinci-002",
   prompt="Write a Random Quote",
