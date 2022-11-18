@@ -93,4 +93,4 @@ def quote(request):
         print("passed tis")
         pass
     c=cr
-    return render(request,'quest.html',{'quto':c,'fir':fir})
+    return render(request,'quote.html',{'quto':c,'fir':fir})
