@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 import os
 import openai
-openai.api_key = "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"
+openai.api_key = "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"
 respons = openai.Completion.create(
   engine="text-davinci-002",
   prompt="Write a Random Quote",
