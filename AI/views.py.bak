@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 import os
 import openai
+openai.organization = "org-JbEOZF4t1NSzHcOAUVQswEaG"
 openai.api_key ="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"
 respons = openai.Completion.create(
   engine="text-davinci-002",
