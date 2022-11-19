@@ -9,4 +9,5 @@ urlpatterns = [
     path('emoji',views.emoji,name='emoji'),
     path('quest',views.quest,name='quest'),
     path('quote',views.quote,name='quote'),
+    path('lst',views.lst),
 ]
