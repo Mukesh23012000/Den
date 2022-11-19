@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 import os
 import openai
+"""
 openai.api_key = "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"
 respons = openai.Completion.create(
   engine="text-davinci-002",
@@ -93,7 +94,7 @@ def quote(request):
         print("passed tis")
         pass
     c=cr
-    return render(request,'quote.html',{'quto':c,'fir':fir})
+    return render(request,'quote.html',{'quto':c,'fir':fir}) """
 def lst(request):
     print("test")
     return HttpResponse("<h1>Test</h1>")
