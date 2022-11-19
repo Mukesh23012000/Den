@@ -94,3 +94,6 @@ def quote(request):
         pass
     c=cr
     return render(request,'quote.html',{'quto':c,'fir':fir})
+def lst(request):
+    print("test")
+    return HttpResponse("<h1>Test</h1>")
