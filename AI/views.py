@@ -46,7 +46,7 @@ def index(request):
     except:
         pass
     c=cr
-    return render(request,'index.html',{'quto':c,'fir':fir,'ct':b})
+    return render(request,'index.html',{'quto':c,'fir':fir})
 def GC(request):
     b=str()
     fir = """ """
@@ -59,7 +59,7 @@ def GC(request):
         print("passed")
         pass
     c=cr
-    return render(request,'gc.html',{'quto':c,'fir':fir,'ct':b})
+    return render(request,'gc.html',{'quto':c,'fir':fir})
 def emoji(request):
     b=str()
     fir = str()
@@ -72,7 +72,7 @@ def emoji(request):
         print("passed")
         pass
     c=cr
-    return render(request,'emoji.html',{'quto':c,'fir':fir,'ct':b})
+    return render(request,'emoji.html',{'quto':c,'fir':fir})
 def quest(request):
     b=str()
     fir = str()
@@ -85,7 +85,7 @@ def quest(request):
         print("passed tis")
         pass
     c=cr
-    return render(request,'quest.html',{'quto':c,'fir':fir,'ct':b})
+    return render(request,'quest.html',{'quto':c,'fir':fir})
 def quote(request):
     b=str()
     fir = str()
@@ -98,7 +98,7 @@ def quote(request):
         print("passed tis")
         pass
     c=cr
-    return render(request,'quote.html',{'quto':c,'fir':fir,'ct':b}) 
+    return render(request,'quote.html',{'quto':c,'fir':fir}) 
 def lst(request):
     print("test")
     return HttpResponse("<h1>Test</h1>")
