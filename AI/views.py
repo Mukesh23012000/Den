@@ -28,6 +28,7 @@ def engine(a,b):
         fir = response['choices'][0]['text']
         return fir
 def index(request):
+    b=str()
     fir = """ """
     try:
         a=request.POST['topic']
@@ -47,6 +48,7 @@ def index(request):
     c=cr
     return render(request,'index.html',{'quto':c,'fir':fir,'ct':b})
 def GC(request):
+    b=str()
     fir = """ """
     try:
         b = request.POST['topic']
@@ -59,6 +61,7 @@ def GC(request):
     c=cr
     return render(request,'gc.html',{'quto':c,'fir':fir,'ct':b})
 def emoji(request):
+    b=str()
     fir = str()
     try:
         b = request.POST['topic']
@@ -71,6 +74,7 @@ def emoji(request):
     c=cr
     return render(request,'emoji.html',{'quto':c,'fir':fir,'ct':b})
 def quest(request):
+    b=str()
     fir = str()
     try:
         b = request.POST['topic']
@@ -83,6 +87,7 @@ def quest(request):
     c=cr
     return render(request,'quest.html',{'quto':c,'fir':fir,'ct':b})
 def quote(request):
+    b=str()
     fir = str()
     try:
         b = request.POST['topic']
