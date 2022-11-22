@@ -80,10 +80,9 @@
 		<br>
 		<h2>{{quto}}</h2>
 		<br>
-		<h3>The Below is your Den 😁<h3>
+		<h3>Enter for Corrections..<h3>
 		<form action='' method='POST'>
 		{%csrf_token%}
-			<qe>Enter for Corrections..</qe>
 			<textarea  name='topic' value='{{ct}}'></textarea>
 			<br> <br>
 		<input type='submit'></input>
@@ -94,5 +93,9 @@
 	<a class="button-32" role="button" href = 'emoji'>Emoji Generator</a>
 	<a class="button-32" role="button" href = 'quest'>Questions</a>
 	<a class="button-32" role="button" href = 'quote'>Quotes</a>
+	<script type="text/javascript"> 
+		var a = "{{ct}}";
+		document.getElementById("my").defaultValue = a;
+	</script>
 	</body>
 </html>
