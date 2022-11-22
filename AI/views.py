@@ -59,7 +59,7 @@ def GC(request):
         print("passed")
         pass
     c=cr
-    return render(request,'gc.html',{'quto':c,'fir':fir})
+    return render(request,'gc.html',{'quto':c,'fir':fir,'ct':b})
 def emoji(request):
     b=str()
     fir = str()
