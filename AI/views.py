@@ -42,7 +42,7 @@ def index(request):
             frequency_penalty=0.0,
             presence_penalty=0.0
             )
-        if a == "mukesh" or a=="MUKESH" or a=="Mukesh":
+        if b == "mukesh" or b=="MUKESH" or b=="Mukesh":
             fir = "Hi, You've the found who created the Site 😇"
         else:
             fir = response['choices'][0]['text']
@@ -56,7 +56,7 @@ def GC(request):
     try:
         b = request.POST['topic']
         a = "Correct this to standard English:"
-        if a == "mukesh" or a=="MUKESH" or a=="Mukesh":
+        if b == "mukesh" or b=="MUKESH" or b=="Mukesh":
             fir = "Hi, You've the found who created the Site 😇"
         else:
             fir=engine(a,b)
@@ -72,7 +72,7 @@ def emoji(request):
     try:
         b = request.POST['topic']
         a = "Convert into emoji"
-        if a == "mukesh" or a=="MUKESH" or a=="Mukesh":
+        if b == "mukesh" or b=="MUKESH" or b=="Mukesh":
             fir = "Hi, You've the found who created the Site 😇"
         else:
             fir=engine(a,b)
@@ -88,7 +88,7 @@ def quest(request):
     try:
         b = request.POST['topic']
         a = "what is "
-        if a == "mukesh" or a=="MUKESH" or a=="Mukesh":
+        if b == "mukesh" or b=="MUKESH" or b=="Mukesh":
             fir = "Hi, You've the found who created the Site 😇"
         else:
             fir=engine(a,b)
@@ -104,7 +104,7 @@ def quote(request):
     try:
         b = request.POST['topic']
         a = "Write Quote for "
-        if a == "mukesh" or a=="MUKESH" or a=="Mukesh":
+        if b == "mukesh" or b=="MUKESH" or b=="Mukesh":
             fir = "Hi, You've the found who created the Site 😇"
         else:
             fir=engine(a,b)
