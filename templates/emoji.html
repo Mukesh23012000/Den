@@ -81,11 +81,10 @@
 		<form action='' method='POST'>
 		{%csrf_token%}
 			<qe>Search for Emojis..</qe>
-			<textarea placeholder='{{ct}}' name='topic'></textarea>
+			<textarea id="my" name='topic'></textarea>
 			<br><br>
 		<input type='submit'></input>
 		</form>
-		<h9>{{ct}}</h9>
 		<p>{{fir}}</p>
 		<br>
 	<center>
@@ -94,5 +93,9 @@
 	<a class="button-32" role="button" href = 'quest'>Questions</a>
 	<a class="button-32" role="button" href = 'quote'>Quotes</a>
 	</center>
+	<script type="text/javascript"> 
+		var a = "{{ct}}";
+		document.getElementById("my").defaultValue = a;
+	</script>
 	</body>
 </html>
