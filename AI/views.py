@@ -50,7 +50,7 @@ def GC(request):
     fir = """ """
     try:
         b = request.POST['topic']
-        a = "Correct Sentence"
+        a = "Correct this to standard English:"
         fir=engine(a,b)
         print(fir)
     except:
