@@ -3,6 +3,7 @@ from django.shortcuts import render
 import os
 import openai
 openai.api_key = "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"
+mk = "Hey 🤩, You've found who created the Site 😇"
 respons = openai.Completion.create(
   engine="text-davinci-002",
   prompt="Write a Random Quote",
@@ -43,7 +44,7 @@ def index(request):
             presence_penalty=0.0
             )
         if b == "mukesh" or b=="MUKESH" or b=="Mukesh":
-            fir = "Hi, You've the found who created the Site 😇"
+            fir = mk
         else:
             fir = response['choices'][0]['text']
     except:
@@ -57,7 +58,7 @@ def GC(request):
         b = request.POST['topic']
         a = "Correct this to standard English:"
         if b == "mukesh" or b=="MUKESH" or b=="Mukesh":
-            fir = "Hi, You've the found who created the Site 😇"
+            fir = mk
         else:
             fir=engine(a,b)
         print(fir)
@@ -73,7 +74,7 @@ def emoji(request):
         b = request.POST['topic']
         a = "Convert into emoji"
         if b == "mukesh" or b=="MUKESH" or b=="Mukesh":
-            fir = "Hi, You've the found who created the Site 😇"
+            fir = mk
         else:
             fir=engine(a,b)
         print(fir)
@@ -89,7 +90,7 @@ def quest(request):
         b = request.POST['topic']
         a = "what is "
         if b == "mukesh" or b=="MUKESH" or b=="Mukesh":
-            fir = "Hi, You've the found who created the Site 😇"
+            fir = mk
         else:
             fir=engine(a,b)
         print(fir)
@@ -105,7 +106,7 @@ def quote(request):
         b = request.POST['topic']
         a = "Write Quote for "
         if b == "mukesh" or b=="MUKESH" or b=="Mukesh":
-            fir = "Hi, You've the found who created the Site 😇"
+            fir = mk
         else:
             fir=engine(a,b)
         print(fir)
