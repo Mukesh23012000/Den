@@ -29,8 +29,8 @@ def engine(a,b):
             )
         fir = response['choices'][0]['text']
         return fir
-def index(request):
-    b=str()
+def ind():
+      b=str()
     fir = """ """
     try:
         a=request.POST['topic']
@@ -51,6 +51,9 @@ def index(request):
     except:
         pass
     c=cr
+    return c,fir,b
+def index(request):
+    c,fir,b=ind()
     return render(request,'index.html',{'quto':c,'fir':fir,'ct':b,'dark':dark})
 def GC(request):
     b=str()
@@ -119,10 +122,12 @@ def quote(request):
 def bl(request):
     global dark
     dark=False
-    index(request)
+    c,fir,b=ind()
+    return render(request,'index.html',{'quto':c,'fir':fir,'ct':b,'dark':dark})
 def wh(request):
     global dark
     dark=True
-    index(request)
+    c,fir,b=ind()
+    return render(request,'index.html',{'quto':c,'fir':fir,'ct':b,'dark':dark})
 def change(request):
   index(request)
