@@ -4,6 +4,21 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 		{% load static %}
 		<style>
+			{% if dark %}
+            			body{
+                			background-color:#121212;
+					color: #fafafa;
+           			    }
+				textarea{
+					background-color:#F5F5DC;
+			        }
+            		{% endif %}
+            		{% if not dark %}
+            			body{
+                			background-color: #fafafa;
+					color: #121212;
+            				}
+            		{% endif %}
 			h2{
 			font-family:"Sofia", sans-serif;
 			}
@@ -96,6 +111,12 @@
 	<a class="button-32" role="button" href = 'GC'>Grammer Check</a>
 	<a class="button-32" role="button" href = 'quest'>Questions</a>
 	<a class="button-32" role="button" href = 'quote'>Quotes</a>
+	{% if dark %}
+        <a class="button-32" role="button" href= {% url 'black' %}>Lite Theme🤍</a>
+        {% endif %}
+        {% if not dark %}
+        <a class="button-32" role="button" href= {% url 'white' %}>Dark Theme🖤</a>
+        {% endif %}
 	</center>
 	<script type="text/javascript"> 
 		var a = "{{ct}}";
