@@ -125,4 +125,4 @@ def wh(request):
     dark=True
     return render(request,"index.html",{'dark':dark})
 def change(request):
-  return render(request,"index.html",{'dark':dark})
+  index(request)
