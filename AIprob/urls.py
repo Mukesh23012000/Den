@@ -11,4 +11,5 @@ urlpatterns = [
     path('quote',views.quote,name='quote'),
     path('black',views.bl,name='black'),
     path('white',views.wh,name='white'),
+    path("change",views.change)
 ]
