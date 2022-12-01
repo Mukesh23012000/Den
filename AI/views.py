@@ -124,3 +124,5 @@ def wh(request):
     global dark
     dark=True
     return render(request,"index.html",{'dark':dark})
+def change(request):
+  return render(request,"index.html",{'dark':dark})
