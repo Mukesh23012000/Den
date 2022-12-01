@@ -119,10 +119,10 @@ def quote(request):
 def bl(request):
     global dark
     dark=False
-    return render(request,"index.html",{'dark':dark})
+    index(request)
 def wh(request):
     global dark
     dark=True
-    return render(request,"index.html",{'dark':dark})
+    index(request)
 def change(request):
   index(request)
