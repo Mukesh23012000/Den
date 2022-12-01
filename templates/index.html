@@ -4,6 +4,16 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 		{% load static %}
 		<style>
+			{% if dark %}
+            			body{
+                			background-color:#121212;
+           			    }
+            		{% endif %}
+            		{% if not dark %}
+            			body{
+                			background-color:White;
+            				}
+            		{% endif %}
 			h2{
 			font-family:"Sofia", sans-serif;
 			}
@@ -100,5 +110,11 @@
 	<a class="button-32" role="button" href = 'emoji'>Emoji Generator</a>
 	<a class="button-32" role="button" href = 'quest'>Questions</a>
 	<a class="button-32" role="button" href = 'quote'>Quotes</a>
+	{% if dark %}
+        <a role="button" href= {% url 'black' %}>Lite Theme🤍</a>
+        {% endif %}
+        {% if not dark %}
+        <a role="button" href= {% url 'white' %}>Dark Theme🖤</a>
+        {% endif %}
 	</body>
 </html>
