@@ -51,7 +51,7 @@ def index(request):
     except:
         pass
     c=cr
-    return render(request,'index.html',{'quto':c,'fir':fir,'ct':b})
+    return render(request,'index.html',{'quto':c,'fir':fir,'ct':b,'dark':dark})
 def GC(request):
     b=str()
     fir = """ """
