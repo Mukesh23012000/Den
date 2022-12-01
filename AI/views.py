@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 import os
 import openai
+dark= False
 openai.api_key = "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"
 mk = "Hey 🤩, You've found who created the Site 😇"
 respons = openai.Completion.create(
@@ -115,6 +116,11 @@ def quote(request):
         pass
     c=cr
     return render(request,'quote.html',{'quto':c,'fir':fir,'ct':b}) 
-def lst(request):
-    print("test")
-    return HttpResponse("<h1>Test</h1>")
+def bl(request):
+    global dark
+    dark=False
+    return render(request,"index.html",{'dark':dark})
+def wh(request):
+    global dark
+    dark=True
+    return render(request,"index.html",{'dark':dark})
