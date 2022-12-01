@@ -30,7 +30,7 @@ def engine(a,b):
         fir = response['choices'][0]['text']
         return fir
 def ind():
-      b=str()
+    b=str()
     fir = """ """
     try:
         a=request.POST['topic']
