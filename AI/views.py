@@ -70,7 +70,7 @@ def GC(request):
         print("passed")
         pass
     c=cr
-    return render(request,'gc.html',{'quto':c,'fir':fir,'ct':b})
+    return render(request,'gc.html',{'quto':c,'fir':fir,'ct':b,'dark':dark})
 def emoji(request):
     b=str()
     fir = str()
@@ -86,7 +86,7 @@ def emoji(request):
         print("passed")
         pass
     c=cr
-    return render(request,'emoji.html',{'quto':c,'fir':fir,'ct':b})
+    return render(request,'emoji.html',{'quto':c,'fir':fir,'ct':b,'dark':dark})
 def quest(request):
     b=str()
     fir = str()
@@ -102,7 +102,7 @@ def quest(request):
         print("passed tis")
         pass
     c=cr
-    return render(request,'quest.html',{'quto':c,'fir':fir,'ct':b})
+    return render(request,'quest.html',{'quto':c,'fir':fir,'ct':b,'dark':dark})
 def quote(request):
     b=str()
     fir = str()
@@ -118,7 +118,7 @@ def quote(request):
         print("passed tis")
         pass
     c=cr
-    return render(request,'quote.html',{'quto':c,'fir':fir,'ct':b}) 
+    return render(request,'quote.html',{'quto':c,'fir':fir,'ct':b,'dark':dark}) 
 def bl(request):
     global dark
     dark=False
